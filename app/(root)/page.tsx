@@ -1,12 +1,30 @@
-import ProductList from '@/components/shared/product/ProductList';
-import {data} from '@/data/products';
+import { products } from "@/data/products";
+import ProductList from "@/components/shared/product/ProductList";
 
-function HomePage() {
+export default function HomePage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <ProductList data={data.products} title="Products" />
+    <div className="container">
+      <h1 className="text-3xl font-bold mb-4">Our Products</h1>
+
+      <p className="mb-4">Total products: {products.length}</p>
+      <ProductList data={products} title="Featured Products" />
     </div>
   );
 }
 
-export default HomePage
+
+// import { Button } from "@/components/ui/button";
+
+// function HomePage() {
+//   return (
+//     <div>
+//       <main>
+//         <div>Home Page</div>
+//         <Button>Button</Button>
+//             <ProductList data={products} title="Featured Products" />
+//       </main>
+//     </div>
+//   );
+// }
+
+// export default HomePage;
